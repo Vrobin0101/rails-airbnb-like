@@ -1,8 +1,7 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[show edit]
+  before_action :set_booking, only: %i[show edit update]
   before_action :set_offer, only: %i[new create edit update]
-  # before_action :set_user, only: %i[edit update]
-
+  before_action :set_user, only: %i[new create]
   def index
     @booking = Booking.all
   end
@@ -11,13 +10,12 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @booking.user = current_user
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.offer = @offer
-    @booking.user = current_user
+    @booking.user = @user
     if @booking.save
       redirect_to offer_path(@offer)
     else
@@ -29,13 +27,13 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    redirect_to offer_path(@offer)
   end
 
   private
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = current_user
   end
 
   def set_offer
