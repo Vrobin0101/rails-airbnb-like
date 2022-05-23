@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[show edit]
   before_action :set_offer, only: %i[new create edit update]
-  before_action :set_user, only: %i[new create edit update]
+  # before_action :set_user, only: %i[edit update]
 
   def index
     @booking = Booking.all
@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @booking.user = current_user
   end
 
   def create
