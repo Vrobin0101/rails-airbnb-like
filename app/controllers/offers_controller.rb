@@ -15,16 +15,27 @@ class OffersController < ApplicationController
   def create
     @offer = Offer.new(offer_params)
     @offer.user = current_user
+    if @offer.save
+      redirect_to offer_path(@offer)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit() end
 
   def update
     @offer = Offer.update(offer_params)
+    if @offer.save
+      redirect_to offer_path(@offer)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
     @offer.destroy
+    redirect_to offer_path, status: :see_other
   end
 
   private
