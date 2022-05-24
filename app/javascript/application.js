@@ -2,3 +2,11 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('bonjour')
+  flatpickr('.datepicker');
+})
+
+import { initFlatpickr } from "./plugins/flatpickr";
+initFlatpickr();
