@@ -3,7 +3,7 @@ class OffersController < ApplicationController
   before_action :offer_params, only: %i[create update]
 
   def index
-    @offers = Offer.all
+    @offers = policy_scope(Offer)
   end
 
   def show
