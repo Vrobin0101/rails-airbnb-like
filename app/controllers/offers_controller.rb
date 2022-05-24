@@ -3,18 +3,22 @@ class OffersController < ApplicationController
   before_action :offer_params, only: %i[create update]
 
   def index
-    @offers = Offer.all
+    @offers = policy_scope(Offer)
   end
 
-  def show() end
+  def show
+    authorize @offer
+  end
 
   def new
     @offer = Offer.new
+    authorize @offer
   end
 
   def create
     @offer = Offer.new(offer_params)
     @offer.user = current_user
+    authorize @offer
     if @offer.save
       redirect_to offer_path(@offer)
     else
@@ -22,10 +26,13 @@ class OffersController < ApplicationController
     end
   end
 
-  def edit() end
+  def edit
+    authorize @offer
+  end
 
   def update
     @offer = Offer.update(offer_params)
+    authorize @offer
     if @offer.save
       redirect_to offer_path(@offer)
     else
@@ -35,6 +42,7 @@ class OffersController < ApplicationController
 
   def destroy
     @offer.destroy
+    authorize @offer
     redirect_to offer_path, status: :see_other
   end
 
@@ -45,6 +53,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:product_name, :category, :location, :price)
+    params.require(:offer).permit(:product_name, :category, :location, :price, :photo)
   end
 end

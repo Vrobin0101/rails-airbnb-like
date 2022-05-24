@@ -16,7 +16,7 @@ gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 
 gem "faker"
-
+gem "pundit"
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
 
@@ -48,6 +48,8 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
+
+gem "cloudinary"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
