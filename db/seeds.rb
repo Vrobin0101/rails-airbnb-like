@@ -5,14 +5,18 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
 10.times do
   user = User.create(username: Faker::Internet.username, email: Faker::Internet.email, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: 'azerty')
   user.save!
-  rand(1..3).times do
-    offer = Offer.new(product_name: Faker::Hobby.activity, category: Faker::App.name, location: Faker::Address.street_address, price: rand(1..20), user: user)
-    offer.save!
-  end
+end
+
+file = YAML.load_file('db/seed.yml')
+file.each do |hash|
+  offer_name = hash.keys.first
+  image = URI.open(hash[offer_name]['url'])
+  offer = Offer.new(product_name: hash.keys.first, category: hash[offer_name]['category'], location: Faker::Address.street_address, price: rand(1..20), user: User.find(rand(1..10)))
+  offer.photo.attach(io: image, filename: hash[offer_name], content_type: 'png')
+  offer.save!
 end
 
 Offer.all.each do |offer|
