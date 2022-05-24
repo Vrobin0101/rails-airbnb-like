@@ -1,14 +1,17 @@
 .banner {
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: 75% 25%;
   padding: 150px 0;
-  margin: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  height: 500px;
+  background-color: #E2D784;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: #062C30;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.07);
   font-size: 32px;
   font-weight: bold;
 }
@@ -18,4 +21,10 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.btn {
+  background-color: #05595B;
+  color: white;
+  border: #05595B;
 }
