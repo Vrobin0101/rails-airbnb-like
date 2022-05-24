@@ -1,0 +1,90 @@
+- tennis ball:
+    category: tennis
+    url: https://images.pexels.com/photos/207361/pexels-photo-207361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- racket:
+    category: tennis
+    url: https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- net:
+    category: tennis
+    url: https://images.unsplash.com/photo-1580763850690-44fd66eb2863?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVubmlzJTIwbmV0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800
+- wrist bands:
+    category: tennis
+    url: https://contents.mediadecathlon.com/p1995130/k$7ee1f2f6ae5f1ed0fcb44475ed4de3df/tennis-wristbands-white.jpg?format=auto&f=800x800
+- head band:
+    category: tennis
+    url: https://cdn.shoplightspeed.com/shops/607570/files/23161345/800x600x2/nike-swoosh-tennis-headbands.jpg
+- tennis shoes:
+    category: tennis
+    url: https://images.unsplash.com/photo-1616531758650-0c7acbeb6e39?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687
+- tee-shirt:
+    category: tennis
+    url: https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160
+- dress:
+    category: tennis
+    url: https://images.pexels.com/photos/11470929/pexels-photo-11470929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- basket:
+    category: basketball
+    url: https://images.unsplash.com/photo-1531593773601-7a75ca4cd915?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+- ball:
+    category: basketball
+    url: https://images.pexels.com/photos/945471/pexels-photo-945471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- jersey:
+    category: basketball
+    url: https://images.pexels.com/photos/10218647/pexels-photo-10218647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- shoes:
+    category: football
+    url: https://images.unsplash.com/photo-1511886929837-354d827aae26?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928
+- socks:
+    category: football
+    url: https://images.pexels.com/photos/8941645/pexels-photo-8941645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- soccer ball:
+    category: football
+    url: https://images.pexels.com/photos/209841/pexels-photo-209841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- goal:
+    category: football
+    url: https://images.unsplash.com/photo-1508100134119-f93388e60d95?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687
+- stick:
+    category: hockey
+    url: https://images.unsplash.com/photo-1580670759122-71ec87c409ad?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ja2V5JTIwc3RpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800
+- ball:
+    category: hockey
+    url: https://images.unsplash.com/photo-1580670759122-71ec87c409ad?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ja2V5JTIwc3RpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800
+- guards:
+    category: hockey
+    url: https://images.unsplash.com/photo-1580670759122-71ec87c409ad?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ja2V5JTIwc3RpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800
+- helmet:
+    category: hockey
+    url: https://images.pexels.com/photos/6468921/pexels-photo-6468921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- shoes:
+    category: hockey
+    url: https://images.unsplash.com/photo-1550865811-cc8872a15d1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687
+- pads:
+    category: hockey
+    url: https://images.pexels.com/photos/6847287/pexels-photo-6847287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- racket:
+    category: badminton
+    url: https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+- shuttlecock:
+    category: badminton
+    url: https://images.unsplash.com/photo-1612677257608-90309859bbec?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932
+- shoes:
+    category: badminton
+    url: https://images.unsplash.com/photo-1491553895911-0055eca6402d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160
+- clothe:
+    category: badminton
+    url: https://images.unsplash.com/photo-1525171254930-643fc658b64e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1377
+- ski:
+    category: ski
+    url: https://images.pexels.com/photos/257961/pexels-photo-257961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+- boots:
+    category: ski
+    url: https://images.unsplash.com/photo-1610989178999-1d9fbb57c1a1?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+- gloves:
+    category: ski
+    url: https://images.unsplash.com/photo-1617118602199-d3c05ae37ed8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+- combinaisons:
+    category: ski
+    url: https://images.unsplash.com/photo-1609615628693-07ae921847fb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928
+- sticks:
+    category: ski
+    url: https://images.unsplash.com/photo-1493668068984-ac1a19928fdf?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
