@@ -2,10 +2,12 @@
 
 <div id="offers">
   <% @offers.each do |offer| %>
-    <%= render offer %>
-    <p>
-      <%= link_to "Show this offer", offer %>
-    </p>
+    <ul>
+      <li><%= render offer %></li>
+      <p>
+        <%= link_to "Show this offer", offer %>
+      </p>
+    </ul>
   <% end %>
 </div>
 
