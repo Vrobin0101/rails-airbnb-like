@@ -1,8 +1,18 @@
-<div class="container">
-  <h1>My profile</h1>
-  <h2>Dashboard</h2>
-  <h2>My Offers</h2>
-  <%= @offers%>
-  <h2>My Bookings</h2>
-  <%= @bookings%>
-</div>
+<%= render "shared/navbar" %>
+  <div class="container">
+    <p>Bonjour user.name</p>
+    <div class="my-info">
+      <h4>My profile</h4>
+    </div>
+    <div class="my-info">
+      <h4>My dashboard</h4>
+    </div>
+    <div class="my-info">
+      <h4>My offers</h4>
+      <%= @offers%>
+    </div>
+    <div class="my-info">
+      <h4>My bookings</h4>
+      <%= @bookings%>
+    </div>
+  </div>
