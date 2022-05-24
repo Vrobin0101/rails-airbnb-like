@@ -6,6 +6,7 @@ export default class extends Controller {
   connect() {
     console.log('Hello')
     flatpickr(".datepicker", {
+      enableTime: true
     });
   }
 }
