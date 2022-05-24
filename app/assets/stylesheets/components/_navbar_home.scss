@@ -1,0 +1,21 @@
+.navbar-lewagon {
+  justify-content: flex-end;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  justify-content: flex-end;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
