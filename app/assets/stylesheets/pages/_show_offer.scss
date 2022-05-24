@@ -1,0 +1,29 @@
+.img-offer {
+  width: 400px;
+  margin: 30px 0 30px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.show-offer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.show-offer-title {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: #062C30;
+}
+
+.card {
+  margin: 30px 0 30px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  width: 400px;
+}

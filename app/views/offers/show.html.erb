@@ -1,2 +1,36 @@
+
 <%= render "shared/navbar" %>
 <h1>SHOW</h1>
+
+<h1 class='show-offer-title'><%= @offer.product_name.upcase %></h1>
+
+
+<div class="container show-offer">
+  <div class="container offer-details">
+
+    <div class="card">
+      <p>You have searched equipments for <strong><%= @offer.category.capitalize %></strong> in this area : <%= @offer.location %></p>
+    </div>
+
+    <div class="card">
+        <p>This is a <%= @offer.product_name %></p>
+        <p>The renter is located in <%= @offer.location %></p>
+    </div>
+
+    <div class="card">
+      <p>This product is offered by the renter <strong><%= @offer.user.first_name %></strong></p>
+    </div>
+  </div>
+
+  <div class="container img-and-form">
+    <%= cl_image_tag @offer.photo.key, class: 'img-offer' %>
+
+    <div class="form-container">
+        <%= simple_form_for [@offer, @booking], data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.button :submit %>
+        <% end %>
+    </div>
+  </div>
+</div>
