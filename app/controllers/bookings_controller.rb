@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.offer = @offer
     @booking.user = @user
     if @booking.save
-      redirect_to offer_path(@offer)
+      redirect_to my_profile_path, notice: 'Your booking is being processed'
     else
       render :new, status: :unprocessable_entity
     end
