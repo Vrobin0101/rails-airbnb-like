@@ -5,11 +5,20 @@ class OffersController < ApplicationController
 
   def index
     @offers = policy_scope(Offer)
+    if params[:query].present?
+      @offers = Offer.where("category ILIKE ?", "%#{params[:query]}%")
+    else
+      @offers = Offer.all
+    end
   end
 
   def show
     authorize @offer
     @booking = Booking.new
+  end
+
+  def index_category(category)
+    @offers = Offer.where(category: category)
   end
 
   def new
