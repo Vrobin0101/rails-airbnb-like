@@ -1,10 +1,10 @@
 <%= render "shared/navbar" %>
 <br><br><br>
 
-<div class="all-info">
-<h2>Bonjour <%=current_user.first_name %>!</h2>
-<p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
-  <div class="container profile">
+<div class="container">
+  <h2>Bonjour <%=current_user.first_name %>!</h2>
+  <p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
+  <div class="profile">
     <div class="my-info">
       <h4>Ongoing gears</h4>
       <ul>
@@ -25,9 +25,9 @@
 </div>
 
 
-<div class="notification">
-  <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-  <div class="notification-content">
-    <p><small>14th January</small></p>
-    <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit.</p>
-  </div>
+<%# <div class="notification"> %>
+  <%# <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" /> %>
+  <%# <div class="notification-content"> %>
+    <%# <p><small>14th January</small></p> %>
+    <%# <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit.</p> %>
+  <%# </div> %>
