@@ -12,6 +12,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: opacity 0.5s ease-in-out;
 }
 
 .cards {
@@ -60,4 +61,8 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+.card-category:hover{
+  opacity: 0.5;
 }

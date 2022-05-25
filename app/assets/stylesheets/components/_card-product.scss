@@ -6,6 +6,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .card-product img {
@@ -29,8 +30,13 @@
 }
 
 .card-product .card-product-infos {
+  color: #062C30;
   padding: 16px;
-}
+  }
 
 .card-product .card-product-text{
+}
+
+.card-product:hover{
+  opacity: 0.5;
 }
