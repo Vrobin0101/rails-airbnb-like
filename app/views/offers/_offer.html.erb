@@ -1,5 +1,5 @@
 <div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <%= cl_image_tag offer.photo.key %>
   <div class="card-product-infos">
     <div class="card-product-text">
       <h2><%= offer.product_name.capitalize %></h2>

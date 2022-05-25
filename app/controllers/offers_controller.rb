@@ -4,7 +4,9 @@ class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    if params[:category]
+    if params[:query].present?
+      @offers = Offer.where("category ILIKE ?", "%#{params[:query]}%")
+    else if params[:category]
       @offers = policy_scope(Offer.filter_by_category(params[:category]))
     else
       @offers = policy_scope(Offer)
@@ -14,6 +16,10 @@ class OffersController < ApplicationController
   def show
     authorize @offer
     @booking = Booking.new
+  end
+
+  def index_category(category)
+    @offers = Offer.where(category: category)
   end
 
   def new
