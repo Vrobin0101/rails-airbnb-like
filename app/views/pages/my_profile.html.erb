@@ -1,33 +1,39 @@
 <%= render "shared/navbar" %>
-<br><br><br>
+<br>
 
-<div class="all-info">
-<h2>Bonjour <%=current_user.first_name %>!</h2>
-<p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
-  <div class="container profile">
+<div class="container mt-5">
+  <h2>Hello <%=current_user.first_name %>!</h2>
+  <p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
+
+  <div class="profile">
     <div class="my-info">
       <h4>Ongoing gears</h4>
-      <ul>
+      <div class="notification">
         <% @bookings.where(status: "pending").each do |b|%>
-        <li> <%= b.offer.product_name.capitalize %> Status: <%= b.status %></li>
-        <% end %>
-      </ul>
+        <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+        <div class="notification-content">
+          <p><%= b.offer.product_name.capitalize %></p>
+          <p><small>Status: <%= b.status %></small></p>
+        </div>
+          <% end %>
+      </div>
     </div>
+  </div>
+
+  <div class="profile">
     <div class="my-info">
       <h4>Booking history</h4>
-      <ul>
         <% @bookings.each do |b|%>
-        <li>You rented <%= b.offer.product_name.capitalize %> on <%= b.start_date.strftime('%d %B %Y') %> </li>
-        <% end %>
-      </ul>
+      <div class="notification">
+        <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+        <div class="notification-content">
+          <p><%= b.offer.product_name.capitalize %></p>
+          <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
+          <p><small>Status: <%= b.status %></small></p>
+        </div>
+      </div>
+          <% end %>
     </div>
   </div>
+
 </div>
-
-
-<div class="notification">
-  <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-  <div class="notification-content">
-    <p><small>14th January</small></p>
-    <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit.</p>
-  </div>
