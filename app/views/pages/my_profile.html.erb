@@ -1,15 +1,20 @@
 <%= render "shared/navbar" %>
 <br><br><br>
 <div class="all-info">
-<h2>Bonjour <%= current_user.first_name %> !</h2>
-<p><%= current_user.first_name %> <%= current_user.last_name %> - Member since <%= current_user.created_at.strftime('%B %Y') %></p>
+<p>Bonjour user.name</p>
   <div class="container profile">
+    <div class="my-info">
+      <h4>My profile</h4>
+      <ul>
+        <li>user.firstname</li>
+        <li>user.lastname</li>
+        <li>Member since user.created_at</li>
+      </ul>
+    </div>
     <div class="my-info">
       <h4>My dashboard</h4>
       <ul>
-        <% current_user.bookings do |b|%>
-        <li><%= b.status %></li>
-        <% end %>
+        <li>last booking.status</li>
       </ul>
     </div>
     <div class="my-info">
