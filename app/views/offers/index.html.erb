@@ -1,9 +1,8 @@
-<%= render "shared/navbar" %>
-<h1>Offers</h1>
 <div class="container">
-  <div id="offers">
-      <% @offers.each do |offer| %>
-          <%= render offer %>
-      <% end %>
-  </div>
+  <h1>Offers</h1>
+    <div id="offers">
+        <% @offers.each do |offer| %>
+            <%= render offer %>
+        <% end %>
+    </div>
 </div>

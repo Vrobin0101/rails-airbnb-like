@@ -1,9 +1,13 @@
 .navbar-lewagon {
   justify-content: flex-end;
-  background: #E2D784;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9999;
+}
+
+.navbar-yellow {
+  background: #E2D784;
 }
 
 .navbar-lewagon .navbar-collapse {
