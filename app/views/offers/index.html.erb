@@ -1,15 +1,9 @@
-
 <%= render "shared/navbar" %>
 <h1>Offers</h1>
 <div class="container">
   <div id="offers">
       <% @offers.each do |offer| %>
           <%= render offer %>
-          <p>
-            <%= link_to "Show this offer", offer %>
-          </p>
       <% end %>
-
   </div>
-  <%= link_to "New offer", new_offer_path %>
 </div>
