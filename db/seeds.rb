@@ -15,7 +15,6 @@ Offer.destroy_all
 puts 'Cancelling all bookings ! Crushing dreams !'
 Booking.destroy_all
 
-
 STATUS = %w[pending accepted declined cancelled]
 
 puts 'Creating users...'
