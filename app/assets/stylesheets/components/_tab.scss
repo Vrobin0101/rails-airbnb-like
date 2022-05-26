@@ -1,0 +1,17 @@
+.tab {
+  border: 1px solid;
+  border-radius: $radius;
+  color: $green;
+  text-decoration: none;
+  background-color: rgba($color: $white, $alpha: 1.0 );
+    &:hover {
+    cursor: pointer;
+    color: $white;
+    background-color: rgba($color: $green, $alpha: 0.2 );
+  }
+}
+
+.tab-active {
+  background-color: rgba($color: $green, $alpha: 1.0 );
+  color: $white;
+}
