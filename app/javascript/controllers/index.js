@@ -12,3 +12,7 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller.js"
 application.register("map", MapController)
+
+import ToggleController from "./toggle_controller.js"
+application.register("toggle", ToggleController)
+
