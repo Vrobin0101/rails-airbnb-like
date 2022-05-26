@@ -1,15 +1,17 @@
-<%= link_to offer, class: 'text-decoration-none' do %>
-<div class="card-product">
-  <%= cl_image_tag offer.photo.key %>
-  <div class="card-product-infos">
-    <div class="card-product-text">
-      <h2><%= offer.product_name.capitalize %></h2>
-      <p><%= offer.category.capitalize %></p>
-      <p><%= offer.location %></p>
-    </div>
-    <div class="card-product-price">
-      <%= offer.price %>€
+<div class="card-wrapper">
+  <%= link_to offer, class: 'text-decoration-none' do %>
+  <div class="card-product">
+    <%= cl_image_tag offer.photo.key %>
+    <div class="card-product-infos">
+      <div class="card-product-text">
+        <h2><%= offer.product_name.capitalize %></h2>
+        <p><i class="fa-solid fa-medal"></i> <%= offer.category.capitalize %></p>
+        <p><i class="fa-solid fa-location-dot"></i> <%= offer.location %></p>
+      </div>
+      <div class="card-product-price">
+        <p><i class="fa-solid fa-euro-sign"></i> <%= offer.price %> <span class='per-time'>/hour</span></p>
+      </div>
     </div>
   </div>
+  <% end %>
 </div>
-<% end %>

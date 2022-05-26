@@ -5,6 +5,17 @@
   width: 100%;
   z-index: 9999;
   height: 60px;
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      margin-left: 15px;
+      color: #05595B;
+    }
+    h2 {
+      margin: 0px;
+      font-size: 0px;
+      font-weight: bold;
+    }
 }
 
 .navbar-yellow {
@@ -18,13 +29,24 @@
 .navbar-lewagon .container-fluid {
   display: flex;
   flex-wrap: inherit;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
 }
 
-.nav-item {
+.fa-house {
+  font-size: 23px;
+  color: #F5F5F5;
   margin-right: 10px;
+}
+
+.fa-house:hover {
+  opacity: 0.8;
+}
+
+#navbarSupportedContent {
+  display: flex;
+  justify-content: space-between;
 }

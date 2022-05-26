@@ -1,13 +1,37 @@
 <%= render "shared/banner" %>
 
 <div class="container">
+
+  <div class="cards-presentation">
+    <h2>How it works</h2>
+  </div>
+  <div class="cards">
+      <div class="card">
+        <h3>Propose your sport gear</h3>
+        <div>
+          <%= image_tag "Sports App.png" %>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Try a new sport</h3>
+        <div>
+          <%= image_tag "Skating.png" %>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Enjoy! 😎</h3>
+        <div>
+          <%= image_tag "Hoops.png" %>
+        </div>
+      </div>
+    </div>
   <div class="cards-presentation">
     <h2>Discover the sports gear available</h2>
   </div>
-  <div class="cards">
+  <div class="cards-category">
     <% @offers.each do |offer| %>
       <%= link_to offers_path(query: offer.category), class: 'category-link text-decoration-none' do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path offer.photo.key %>)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url(<%= image_path "#{offer.category}.png" %>)">
         <%= offer.category.capitalize %>
         </div>
       <% end %>

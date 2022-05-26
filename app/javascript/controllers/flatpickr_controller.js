@@ -9,17 +9,23 @@ export default class extends Controller {
   static targets = ["start", "end", "price", "time", "offer", "offerinfos"]
   connect() {
     flatpickr(".datepicker", {
+    console.log('Hello')
+    let fp = flatpickr(".datepicker", {
       enableTime: true,
-      minDate: new Date()
+      minDate: new Date(),
+      dateFormat: "d-m-Y H:i",
+      time_24hr: true,
+      shorthandCurrentMonth: true,
+      "locale": {
+          "firstDayOfWeek": 1
+      }
     });
+
+    fp.minuteElement.style.display = "none";
   }
   total(event) {
     this.offerinfosTarget.classList.add("d-none")
-      console.log(this.offerTarget.innerText)
     const offerPrice = parseFloat(this.offerTarget.innerText, 10)
-    console.log(offerPrice)
-    console.log(this.startTarget.value)
-    console.log(this.endTarget.value)
     if (this.startTarget.value !== "" && this.endTarget.value !== "") {
       console.log('got here')
       const start = new Date(this.startTarget.value)
