@@ -8,6 +8,13 @@ class OffersController < ApplicationController
     if params[:query].present?
       @offers = Offer.where("category ILIKE ? OR product_name ILIKE ? OR location ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%", "%#{params[:query]}%")
     end
+    @markers = @offers.geocoded.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { offer: offer })
+      }
+    end
   end
 
   def show
