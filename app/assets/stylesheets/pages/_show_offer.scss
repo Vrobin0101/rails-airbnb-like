@@ -2,6 +2,8 @@
   padding-top: 20px;
   font-weight: normal;
   color: #062C30;
+  text-align: center;
+  font-size: 30px;
 }
 
 .show-offer {
@@ -19,6 +21,8 @@
 
 .img-offer {
   width: 100%;
+  height: 450px;
+  object-fit: cover;
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -39,4 +43,19 @@ padding-right: 4px;
 .new_booking {
   padding: 10px;
   margin: 30px 0 30px 0;
+}
+
+.description > p {
+  font-size: 20px;
+  // background-color: $lightgrey;
+  border-radius: 5px;
+  padding: 4px;
+  text-align: center;
+}
+
+.description > h2 {
+  font-size: 14px;
+  color: $dark;
+  padding: 4px;
+  text-align: center;
 }
