@@ -1,5 +1,14 @@
-#offers {
-  margin-top: 30px;
+// #offers {
+//   margin-top: 30px;
+// }
+
+.card-wrapper {
+  width: 80%;
+}
+
+.index-offer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .card-product {
@@ -10,6 +19,7 @@
   display: flex;
   align-items: center;
   margin: 20px;
+  width: 100%;
 }
 
 .card-product img {
