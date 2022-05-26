@@ -1,8 +1,7 @@
-.img-offer {
-  width: 414px;
-  margin: 30px 0 30px 0;
-  border-radius: 5px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+.show-offer-title {
+  padding-top: 20px;
+  font-weight: normal;
+  color: #062C30;
 }
 
 .show-offer {
@@ -10,22 +9,31 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.show-offer-title {
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  color: #062C30;
-}
-
 .card-offer-info {
+  width: 100%;
   margin: 30px 0 30px 0;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+.img-offer {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+ul{
+list-style: none;
+}
+
+.fa-solid {
+padding-right: 4px;
+}
+
 .form-container {
-  width: 414px;
+  width: 100%;
 }
 
 .new_booking {
