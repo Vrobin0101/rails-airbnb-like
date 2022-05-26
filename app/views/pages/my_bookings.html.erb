@@ -1,16 +1,18 @@
 <%= render "shared/navbar" %>
 
 <div class="container mt-10" data-controller="toggle">
-  <h2 class="title-my-bookings">Hello <%=current_user.first_name %>!</h2>
-  <p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
+  <div class="container header-dashboard">
+    <h2 class="title-my-bookings">Hello <%=current_user.first_name %>!</h2>
+    <p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
+  </div>
 
-  <div class="d-flex flex-row-reverse">
+  <div class="d-flex tabs-dashboard">
     <div class="tabs-bar">
       <div class="container">
-        <a class="tab px-3 py-2" data-toggle-target="pendingBtn"
-        data-action="click->toggle#displayPending">Pending</a>
         <a class="tab px-3 py-2 tab-active" data-toggle-target="allBtn"
         data-action="click->toggle#displayAll">All</a>
+        <a class="tab px-3 py-2" data-toggle-target="pendingBtn"
+        data-action="click->toggle#displayPending">Pending</a>
         <a class="tab px-3 py-2" data-toggle-target="acceptedBtn"
 
         data-action="click->toggle#displayAccepted">Accepted</a>
@@ -20,60 +22,76 @@
     </div>
   </div>
 
-  <div class="profile">
+  <div class="my-dashboard">
+
+      <div class="my-info">
+      <h4>Bookings</h4>
+        <div data-toggle-target="pending">
+          <% @bookings.where(status: "pending").each do |b|%>
+          <div class="notification">
+            <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+            <div class="notification-content">
+              <p><%= b.offer.product_name.capitalize %></p>
+              <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
+              <p><small class="text-warning"> <i class="rotating fas fa-circle-notch"></i> <%= b.status.capitalize %></small></p>
+            </div>
+          </div>
+          <% end %>
+        </div>
+
+        <div data-toggle-target="accepted">
+          <% @bookings.where(status: "accepted").each do |b|%>
+          <div class="notification">
+            <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+            <div class="notification-content">
+              <p><%= b.offer.product_name.capitalize %></p>
+              <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
+              <p><small class="text-success "><i class="fas fa-check"></i> <%= b.status.capitalize %></small></p>
+            </div>
+          </div>
+          <% end %>
+        </div>
+
+        <div data-toggle-target="declined">
+          <% @bookings.where(status: "declined").each do |b|%>
+          <div class="notification">
+            <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+            <div class="notification-content">
+              <p><%= b.offer.product_name.capitalize %></p>
+              <p><small class="text-danger "><i class="fas fa-times"></i> <%= b.status.capitalize %></small></p>
+            </div>
+          </div>
+          <% end %>
+        </div>
+
+        <div data-toggle-target="cancelled">
+          <% @bookings.where(status: "cancelled").each do |b|%>
+          <div class="notification">
+            <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+            <div class="notification-content">
+              <p><%= b.offer.product_name.capitalize %></p>
+              <p><small class="text-info "><i class="fas fa-ban"></i></i> <%= b.status.capitalize %></small></p>
+            </div>
+          </div>
+          <% end %>
+        </div>
+
+      </div>
 
     <div class="my-info">
-    <h4>Bookings</h4>
-      <div data-toggle-target="pending">
-        <% @bookings.where(status: "pending").each do |b|%>
-        <div class="notification">
-          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
-          <div class="notification-content">
-            <p><%= b.offer.product_name.capitalize %></p>
-            <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
-            <p><small class="text-warning"> <i class="rotating fas fa-circle-notch"></i> <%= b.status.capitalize %></small></p>
+      <h4>Offers</h4>
+        <div data-toggle-target="pending">
+          <% @offers.each do |b|%>
+          <div class="notification">
+            <%= cl_image_tag b.photo.key, class: "avatar-large"%>
+            <div class="notification-content">
+              <p><%= b.product_name.capitalize %></p>
+              <p><small><%= b.location %></small></p>
+              <p><small class="text-warning"></small></p>
+            </div>
+            <%= link_to 'Edit', edit_offer_path(b), class: 'btn btn-edit-offer' %>
           </div>
+          <% end %>
         </div>
-        <% end %>
-      </div>
-
-      <div data-toggle-target="accepted">
-        <% @bookings.where(status: "accepted").each do |b|%>
-        <div class="notification">
-          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
-          <div class="notification-content">
-            <p><%= b.offer.product_name.capitalize %></p>
-            <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
-            <p><small class="text-success "><i class="fas fa-check"></i> <%= b.status.capitalize %></small></p>
-          </div>
-        </div>
-        <% end %>
-      </div>
-
-      <div data-toggle-target="declined">
-        <% @bookings.where(status: "declined").each do |b|%>
-        <div class="notification">
-          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
-          <div class="notification-content">
-            <p><%= b.offer.product_name.capitalize %></p>
-            <p><small class="text-danger "><i class="fas fa-times"></i> <%= b.status.capitalize %></small></p>
-          </div>
-        </div>
-        <% end %>
-      </div>
-
-      <div data-toggle-target="cancelled">
-        <% @bookings.where(status: "cancelled").each do |b|%>
-        <div class="notification">
-          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
-          <div class="notification-content">
-            <p><%= b.offer.product_name.capitalize %></p>
-            <p><small class="text-info "><i class="fas fa-ban"></i></i> <%= b.status.capitalize %></small></p>
-          </div>
-        </div>
-        <% end %>
-      </div>
-
-    </div>
   </div>
 </div>
