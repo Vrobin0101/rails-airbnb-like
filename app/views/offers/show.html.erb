@@ -1,44 +1,39 @@
 
 <%= render "shared/navbar" %>
 
-<h1 class='show-offer-title'><%= @offer.product_name.upcase %></h1>
+<h1 class='show-offer-title row justify-content-center'><%= @offer.product_name.upcase %></h1>
+<div class="col-md-12">
 
-
-<div class="container show-offer">
-  <div class="container offer-details">
-
-    <div class="card card-offer-info">
-      <p>You have searched equipments for <strong><%= @offer.category.capitalize %></strong> in this area : <%= @offer.location %></p>
+  <div class="container show-offer">
+    <div class="container offer-details">
+      <div class="card card-offer-info">
+        <%= cl_image_tag @offer.photo.key, class: 'img-offer' %>
+        <div class="description row justify-content-center">
+          <p><%= @offer.description %></p>
+        </div>
+        <div class="details">
+          <ul class="my-3">
+          <li><p><i class="fa-solid fa-euro-sign fa-lg"></i> <%= @offer.price %> for an <strong>hour</strong></p></li>
+          <li><p><i class="fa-solid fa-euro-sign fa-lg"></i> <%= @offer.price * 10 %> for the <strong>day</strong>, be fierce!</p></li>
+          <li><p><i class="fa-solid fa-location-dot fa-lg"></i> <%= @offer.location %></p></li>
+          <li><p><i class="fa-solid fa-user fa-lg"></i>  <%= @offer.user.first_name %> will share his passion of <%= @offer.category.capitalize %> with you</p></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="card card-offer-info">
-        <p><%= @offer.description %></p>
-        <p>The renter is located in <%= @offer.location %></p>
-    </div>
-
-    <div class="card card-offer-info">
-        <p>The rate is <%= @offer.price %>€ per hour</p>
-        <p>The rate is <%= @offer.price * 10 %>€ per day</p>
-    </div>
-
-    <div class="card card-offer-info">
-      <p>This product is offered by the renter <strong><%= @offer.user.first_name %></strong></p>
-    </div>
-  </div>
-
-  <div class="container img-and-form">
-    <%= cl_image_tag @offer.photo.key, class: 'img-offer' %>
-
-    <div class="form-container">
-        <%= simple_form_for [@offer, @booking], data: { controller: 'flatpickr' } do |f| %>
-          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <% if user_signed_in? %>
-            <%= f.button :submit %>
-          <% else %>
-            <%= f.button :submit, class: 'disabled' %>
+    <div class="container img-and-form">
+      <div class="form-container">
+          <%= simple_form_for [@offer, @booking], data: { controller: 'flatpickr' } do |f| %>
+            <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <% if user_signed_in? %>
+              <%= f.submit 'Book next gear', class: 'button' %>
+            <% else %>
+              <%= f.submit 'Book next gear', class: 'disabled button' %>
+            <% end %>
           <% end %>
-        <% end %>
+      </div>
     </div>
   </div>
 </div>
