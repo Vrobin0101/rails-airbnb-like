@@ -28,10 +28,15 @@
     </div>
 
     <div class="container img-and-form">
-      <div class="form-container">
-          <%= simple_form_for [@offer, @booking], data: { controller: 'flatpickr' } do |f| %>
-            <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <div class="form-container" data-controller="flatpickr" data-action="change->flatpickr#total">
+          <%= simple_form_for [@offer, @booking] do |f| %>
+              <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker", data: {flatpickr_target: 'start'}} %>
+              <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker", data: {flatpickr_target: 'end'}} %>
+              <div class="d-none" data-flatpickr-target="offer"><%= @offer.price %></div>
+            <div class="d-none d-flex mx-1 justify-content-between" data-flatpickr-target="offerinfos">
+              <p class="price" data-flatpickr-target="price"></p>
+              <p class="time" data-flatpickr-target="time"></p>
+            </div>
             <% if user_signed_in? %>
               <%= f.submit 'Book Gear', class: 'btn' %>
             <% else %>
