@@ -22,10 +22,6 @@ class OffersController < ApplicationController
     @booking = Booking.new
   end
 
-  def index_category(category)
-    @offers = Offer.where(category: category)
-  end
-
   def new
     @offer = Offer.new
     authorize @offer
@@ -69,6 +65,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:product_name, :category, :location, :price, :photo)
+    params.require(:offer).permit(:product_name, :category, :location, :price, :photo, :description)
   end
 end
