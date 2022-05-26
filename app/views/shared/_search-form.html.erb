@@ -1,17 +1,8 @@
-<%# <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
-  <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" placeholder="Find your next gear" name="search[query]" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
-  </div>
-</form> %>
-
 <%= form_tag offers_path, method: :get, class: "simple_form search" do %>
 <div class="search-form-control form-group">
   <%= text_field_tag :query, params[:query], class: "form-control string required", id: "search_query", placeholder: "Find your next sport gear" %>
   <button name="button" type="submit" class="btn btn-flat">
-    <i class="fas fa-search"></i> Search
+    <i class="fas fa-search"></i>
   </button>
 </div>
 <% end %>
