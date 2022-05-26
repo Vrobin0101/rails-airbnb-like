@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @offers = Offer.select('DISTINCT ON (category) *')
   end
 
-  def my_profile
+  def my_bookings
     @bookings = Booking.where(user: current_user)
   end
 end

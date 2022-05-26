@@ -8,14 +8,15 @@
   <div class="d-flex flex-row-reverse">
     <div class="tabs-bar">
       <div class="container">
+        <a class="tab px-3 py-2" data-toggle-target="pendingBtn"
+        data-action="click->toggle#displayPending">Pending</a>
         <a class="tab px-3 py-2 tab-active" data-toggle-target="allBtn"
         data-action="click->toggle#displayAll">All</a>
         <a class="tab px-3 py-2" data-toggle-target="acceptedBtn"
+
         data-action="click->toggle#displayAccepted">Accepted</a>
         <a class="tab px-3 py-2" data-toggle-target="declinedBtn"
         data-action="click->toggle#displayDeclined">Declined</a>
-        <a class="tab px-3 py-2" data-toggle-target="pendingBtn"
-        data-action="click->toggle#displayPending">Pending</a>
       </div>
     </div>
   </div>
@@ -24,20 +25,20 @@
 
     <div class="my-info">
     <h4>Bookings</h4>
-      <div class="" data-toggle-target="pending">
+      <div data-toggle-target="pending">
         <% @bookings.where(status: "pending").each do |b|%>
         <div class="notification">
           <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
           <div class="notification-content">
             <p><%= b.offer.product_name.capitalize %></p>
             <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
-            <p><small class="text-warning"> <i class="fas fa-circle-notch"></i> <%= b.status.capitalize %>...</small></p>
+            <p><small class="text-warning"> <i class="rotating fas fa-circle-notch"></i> <%= b.status.capitalize %></small></p>
           </div>
         </div>
         <% end %>
       </div>
 
-      <div class="" data-toggle-target="accepted">
+      <div data-toggle-target="accepted">
         <% @bookings.where(status: "accepted").each do |b|%>
         <div class="notification">
           <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
@@ -50,12 +51,25 @@
         <% end %>
       </div>
 
-      <div class="" data-toggle-target="declined">
+      <div data-toggle-target="declined">
         <% @bookings.where(status: "declined").each do |b|%>
         <div class="notification">
           <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
           <div class="notification-content">
+            <p><%= b.offer.product_name.capitalize %></p>
             <p><small class="text-danger "><i class="fas fa-times"></i> <%= b.status.capitalize %></small></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+      <div data-toggle-target="cancelled">
+        <% @bookings.where(status: "cancelled").each do |b|%>
+        <div class="notification">
+          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+          <div class="notification-content">
+            <p><%= b.offer.product_name.capitalize %></p>
+            <p><small class="text-info "><i class="fas fa-ban"></i></i> <%= b.status.capitalize %></small></p>
           </div>
         </div>
         <% end %>

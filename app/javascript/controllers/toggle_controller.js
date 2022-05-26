@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="toggle"
 export default class extends Controller {
-  static targets = ["pending", "accepted", "declined", "pendingBtn", "acceptedBtn", "declinedBtn", "allBtn"]
+  static targets = ["pending", "accepted", "declined", "cancelled", "pendingBtn", "acceptedBtn", "declinedBtn", "allBtn"]
   connect() {
   }
 
@@ -12,6 +12,7 @@ export default class extends Controller {
     this.acceptedTarget.classList.remove("d-none")
     this.acceptedBtnTarget.classList.remove("tab-active")
     this.declinedTarget.classList.remove("d-none")
+    this.cancelledTarget.classList.remove("d-none")
     this.declinedBtnTarget.classList.remove("tab-active")
     event.target.classList.add("tab-active")
   }
@@ -43,16 +44,19 @@ export default class extends Controller {
   hidePending() {
     this.pendingBtnTarget.classList.remove("tab-active")
     this.pendingTarget.classList.add("d-none")
+    this.cancelledTarget.classList.add("d-none")
   }
 
   hideAccepted() {
     this.acceptedBtnTarget.classList.remove("tab-active")
     this.acceptedTarget.classList.add("d-none")
+    this.cancelledTarget.classList.add("d-none")
   }
 
   hideDeclined() {
     this.declinedBtnTarget.classList.remove("tab-active")
     this.declinedTarget.classList.add("d-none")
+    this.cancelledTarget.classList.add("d-none")
   }
 
   hideAll() {
