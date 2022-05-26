@@ -6,6 +6,16 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+puts 'Killing users !'
+User.destroy_all
+
+puts 'Deleting all offers !'
+Offer.destroy_all
+
+puts 'Cancelling all bookings ! Crushing dreams !'
+Booking.destroy_all
+
+
 STATUS = %w[pending accepted declined cancelled]
 
 puts 'Creating users...'
