@@ -1,2 +1,3 @@
-<h2><%= offer.product_name %></h2>
-<p><%= offer.location %></p>
+<h6><%= link_to offer.product_name.titleize, offer_path(offer), id: "info-window-title" %></h6>
+<p class="info-window-location"><%= offer.location %></p>
+<p class="username-map">Rented out by <i><%= offer.user.first_name %></i></p>
