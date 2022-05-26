@@ -1,0 +1,13 @@
+<div class="form py-3">
+  <%= simple_form_for(@offer) do |f| %>
+  <div class="d-flex flex-row justify-content-between">
+    <%= f.input :product_name, placeholder: 'Shin guard'%>
+    <%= f.input :category, placeholder: 'Football'%>
+  </div>
+  <%= f.input :description, placeholder: 'Get the best shield to avoid nasty injuries'%>
+  <%= f.input :location, placeholder: '16 Villa Gaudelet 75011 Paris'%>
+  <%= f.input :price, placeholder: 'in euros per day'%>
+  <%= f.input :photo, as: :file%>
+  <%= f.submit 'Create gear', class:'btn btn-large'%>
+  <% end %>
+</div>

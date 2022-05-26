@@ -1,0 +1,29 @@
+.simple_form {
+  color: $dark;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  display: inline;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $dark;
+  border-radius: 5px;
+}
+
+.welcome-message > h4 {
+  color: $green;
+}
+
+.welcome-message > h5 {
+  color: $dark;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.btn-large {
+  width: 100%;
+}
