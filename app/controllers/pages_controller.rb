@@ -7,5 +7,6 @@ class PagesController < ApplicationController
 
   def my_bookings
     @bookings = Booking.where(user: current_user)
+    @offers = Offer.where(user: current_user)
   end
 end
