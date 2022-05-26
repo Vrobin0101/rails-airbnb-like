@@ -6,11 +6,7 @@ class OffersController < ApplicationController
   def index
     @offers = policy_scope(Offer)
     if params[:query].present?
-      @offers = Offer.where("category ILIKE ?", "%#{params[:query]}%")
-    elsif params[:category]
-      @offers = policy_scope(Offer.filter_by_category(params[:category]))
-    else
-      @offers = policy_scope(Offer)
+      @offers = Offer.where("category ILIKE ? OR product_name ILIKE ? OR location ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%", "%#{params[:query]}%")
     end
   end
 
