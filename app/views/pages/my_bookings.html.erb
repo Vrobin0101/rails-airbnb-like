@@ -1,8 +1,7 @@
 <%= render "shared/navbar" %>
-<br>
 
-<div class="container mt-5" data-controller="toggle">
-  <h2>Hello <%=current_user.first_name %>!</h2>
+<div class="container mt-10" data-controller="toggle">
+  <h2 class="title-my-bookings">Hello <%=current_user.first_name %>!</h2>
   <p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
 
   <div class="d-flex flex-row-reverse">
