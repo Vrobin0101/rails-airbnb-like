@@ -1,10 +1,39 @@
 // Specific CSS for your home-page
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card {
+  display: flex;
+  height: 240px;
+  width: 30%;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #05595B;
+      margin-bottom: 15px;
+      margin-top: 30px;
+    }
+    img {
+      width: 150px;
+    }
+}
+
 .cards-presentation {
   margin-top: 40px;
   margin-bottom: 22px;
-  text-align: left;
+  text-align: center;
   h2 {
     font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #062C30
   }
 }
 
@@ -24,7 +53,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.cards {
+.cards-category {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3em;
@@ -36,6 +65,7 @@
     text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
   }
 }
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
