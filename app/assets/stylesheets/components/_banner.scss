@@ -1,11 +1,11 @@
 .banner {
   background-repeat: no-repeat ;
-  background-size: 395px;
-  background-position: 85% 25%;
+  background-size: 675px;
+  background-position: 94% 19%;
   padding: 150px 0;
   position: relative;
   margin-bottom: 20px;
-  height: 350px;
+  height: 375px;
   background-color: #E2D784;
 }
 
@@ -18,6 +18,7 @@
 }
 
 .banner p {
+  margin-top: 5px;
   font-size: 20px;
   color: white;
   opacity: .7;
@@ -33,11 +34,12 @@
 }
 
 .banner .search {
-  height: 150px;
-  width: 450px;
+  height: 120px;
+  width: 540px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .h5 {
@@ -48,5 +50,5 @@
 .banner-search {
   position: absolute;
   top: 40px;
-  left: 80px;
+  left: 64px;
 }
