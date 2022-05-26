@@ -17,13 +17,13 @@
             <%= link_to "Create an offer", new_offer_path, class: "nav-link", id:"btn-navbar"%>
           </li>
           <li class="nav-item active">
-            <%= link_to root_path, class: "nav-link" do %>
+            <%= link_to root_path, class: "nav-link", id: 'nav-house' do %>
             <i class="fa-solid fa-house"></i>
             <% end %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://doodleipsum.com/700/avatar?bg=05595b&i=40beceda21ec29f68878a3a0415aeb6b", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <div id='dropdown-background' class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Bookings", my_bookings_path, class: "dropdown-item" %>
               <%= link_to "Sign Out", destroy_user_session_path, class: "dropdown-item" %>
             </div>

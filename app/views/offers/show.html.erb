@@ -7,9 +7,9 @@
     <div class="container offer-details">
       <div class="card card-offer-info">
         <%= cl_image_tag @offer.photo.key, class: 'img-offer' %>
-          <% if policy(@offer).update? %>
-            <%= link_to 'Edit', edit_offer_path(@offer) %>
-          <% end %>
+          <%# if policy(@offer).update? %>
+            <%#= link_to 'Edit', edit_offer_path(@offer) %>
+          <%# end %>
         <div class="description row justify-content-center mt-3">
           <p class='col-md-8'><i><i class="fa-solid fa-quote-left fa-lg"></i> <%= @offer.description %></i></p>
           <h2 class='col-md-8'>- <%= @offer.user.first_name %>, happy owner of this awesome <%= @offer.product_name %> </h2>
