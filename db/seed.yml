@@ -1,90 +1,228 @@
 - tennis ball:
     category: tennis
     url: https://images.pexels.com/photos/207361/pexels-photo-207361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 70 Boulevard Saint-Germain, 75004, Paris
+    description: This is the best ball I ever had, it was the favorite one of my dog.
+    price: 0.5
 - racket:
     category: tennis
     url: https://images.pexels.com/photos/209977/pexels-photo-209977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 111 Rue de Longchamp, 75016, Paris
+    description: Please do not destroy my racket, I love it so much!
+    price: 2
 - net:
     category: tennis
     url: https://images.unsplash.com/photo-1580763850690-44fd66eb2863?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVubmlzJTIwbmV0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800
+    location: 101 Rue Chevaleret, 75013, Paris
+    description: I sewed it when I was young, my grand-mother taught me how to do that, it was a great memory. Anyway, enjoy!
+    price: 10
 - wrist bands:
     category: tennis
     url: https://contents.mediadecathlon.com/p1995130/k$7ee1f2f6ae5f1ed0fcb44475ed4de3df/tennis-wristbands-white.jpg?format=auto&f=800x800
+    location: 54 Avenue Kleber, 75116, Paris
+    description: It's clean, I swear I didn't used it after washing it. Please rent it frome me!
+    price: 1
 - head band:
     category: tennis
     url: https://cdn.shoplightspeed.com/shops/607570/files/23161345/800x600x2/nike-swoosh-tennis-headbands.jpg
+    location: 6 Avenue Montaigne, 75008, Paris
+    description: I had this since I was a kid, it's a little bit torned but it works.
+    price: 1
 - tennis shoes:
     category: tennis
     url: https://images.unsplash.com/photo-1616531758650-0c7acbeb6e39?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687
+    location: 23 Avenue Jean Guiton, 17000, La Rochelle
+    description:  It's brand new, but I have an injury from football, so I cannot use them...
+    price: 3
 - tee-shirt:
     category: tennis
     url: https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160
+    location: 18 Rue Grolee, 69002, Lyon
+    description: It's a brand shirt, so please, only serious offers.
+    price: 0.8
 - dress:
     category: tennis
     url: https://images.pexels.com/photos/11470929/pexels-photo-11470929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 159 Boulevard de la Croix-Rousse, 69004, Lyon
+    description: I stole it from my sister so please don't lose it or I'm dead!
+    price: 2
 - basket:
     category: basketball
     url: https://images.unsplash.com/photo-1531593773601-7a75ca4cd915?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 140 Boulevard Joffre, 17000, La Rochelle
+    description: It's a hoop with a net around it, what do you expect?
+    price: 2
 - ball:
     category: basketball
     url: https://images.pexels.com/photos/945471/pexels-photo-945471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 133 Avenue Parmentier, 75011, Paris
+    description: Signed by Michael Jordan himself, and bought from Wish, it's a something you will not find anywhere else!
+    price: 5
 - jersey:
     category: basketball
     url: https://images.pexels.com/photos/10218647/pexels-photo-10218647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 142 Rue Saint-Denis, 75002, Paris
+    description: I got it when I saw an NBA game while in LA, so it's very preicous to me, please refrain from renting it if you're not serious.
+    price: 7
 - shoes:
     category: football
     url: https://images.unsplash.com/photo-1511886929837-354d827aae26?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928
+    location: 13 Rue Sardinerie, 17000, La Rochelle
+    description: Mbappé himself was wearing these shoes when he won the world cup, so only serious offers!
+    price: 10
 - socks:
     category: football
     url: https://images.pexels.com/photos/8941645/pexels-photo-8941645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 53 Avenue Felix Faure, 69003, Lyon
+    description: There is a hole for the big toe, but they still work.
+    price: 0.4
 - soccer ball:
     category: football
     url: https://images.pexels.com/photos/209841/pexels-photo-209841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 189 Rue d'Aubervilliers, 75018, Paris
+    description: Directly bought at the Stade de France after a game of PSG-Lyon.
+    price: 1.5
 - goal:
     category: football
     url: https://images.unsplash.com/photo-1508100134119-f93388e60d95?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687
+    location: 66 Avenue du 11 Novembre 1918, 17300, Rochefort
+    description: I got them after a wild night! I don't remember how but they were there the next morning when I woke up. Anyway if you're intersted.
+    price: 10
 - stick:
     category: hockey
     url: https://images.unsplash.com/photo-1580670759122-71ec87c409ad?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ja2V5JTIwc3RpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800
+    location: 13 Rue Austerlitz, 69004, Lyon
+    description: I bought it thinking it was for golf, but it seems I was mistaken...
+    price: 2.3
 - ball:
     category: hockey
     url: https://images.unsplash.com/photo-1580670759122-71ec87c409ad?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ja2V5JTIwc3RpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800
+    location: 93 Rue Julien Lacroix, 75020, Paris
+    description: It looks like it could be a chocolate cookie at 4 AM, but talk to my dentist and he'll say otherwise...
+    price: 0.7
 - guards:
     category: hockey
     url: https://images.unsplash.com/photo-1580670759122-71ec87c409ad?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ja2V5JTIwc3RpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800
+    location: 111 Boulevard Emile Delmas, 17000, La Rochelle
+    description: You look like you are ready for war in those, but actually you are just skating on ice.
+    price: 8
 - helmet:
     category: hockey
     url: https://images.pexels.com/photos/6468921/pexels-photo-6468921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 7 Rue du Sommerard, 75005, Paris
+    description: You don't look good on bike with this, only weird unfortunately.
+    price: 2.7
 - shoes:
     category: hockey
     url: https://images.unsplash.com/photo-1550865811-cc8872a15d1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687
+    location: 6 Passage des Panoramas, 75002, Paris
+    description: Only for hockey, if you are planing to ice danse, it will looks very strange to everyone else.
+    price: 7.5
 - pads:
     category: hockey
     url: https://images.pexels.com/photos/6847287/pexels-photo-6847287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 36 Rue Tramassac, 69005, Paris
+    description: Looks like it could be for baseball, but it's not actually.
+    price: 2
 - racket:
     category: badminton
     url: https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 31 Rue Saint-Jean du Perot, 17000, La Rochelle
+    description: I had a great time with my girlfriend with this, but she's not good at badminton so we are not playing much...
+    price: 3
 - shuttlecock:
     category: badminton
     url: https://images.unsplash.com/photo-1612677257608-90309859bbec?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932
+    location: 13 Avenue de Saint-Ouen, 75017, Paris
+    description: If you see an add saying I'm not good, it's wrong. I. Am.
+    price: 0.25
 - shoes:
     category: badminton
     url: https://images.unsplash.com/photo-1491553895911-0055eca6402d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160
+    location: 47 Rue Belfort, 69004, Lyon
+    description: I mean, it's shoes. I didn't bought them specifically for badminton, but it works well. So go for it.
+    price: 2.85
 - clothe:
     category: badminton
     url: https://images.unsplash.com/photo-1525171254930-643fc658b64e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1377
+    location: 14 Avenue Jean Moulin, 75014, Paris
+    description: Same as the shoes, it's clothes, so do not make a bigger deal out of this.
+    price: 1.3
 - ski:
     category: ski
     url: https://images.pexels.com/photos/257961/pexels-photo-257961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+    location: 53 Avenue Felix Faure, 69003, Lyon
+    description: If you want to look good at La Folie Douce, these are for you! Success guaranted. NO REFUND!
+    price: 4
 - boots:
     category: ski
     url: https://images.unsplash.com/photo-1610989178999-1d9fbb57c1a1?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 6 Rue Alsace-Lorraine, 17100, Saintes
+    description: I feel like Lady Gaga in House of Gucci when I wear them!
+    price: 2.1
 - gloves:
     category: ski
     url: https://images.unsplash.com/photo-1617118602199-d3c05ae37ed8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 17 Boulevard de Strasbourg, 75010, Paris
+    description: It's actually for woodworking but it'll do the job as well in case you fall.
+    price: 0.95
 - combinaisons:
     category: ski
     url: https://images.unsplash.com/photo-1609615628693-07ae921847fb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928
+    location: 15 Rue Arbre Sec, 69001, Lyon
+    description: It's a child size, but if you're like me it'll fit you well and nobody will know the difference!
+    price: 2.2
 - sticks:
     category: ski
     url: https://images.unsplash.com/photo-1493668068984-ac1a19928fdf?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 39 Boulevard de Clichy, 75009, Paris
+    description: It's a good stick. Do not try to throw it to your dog, it will not end well.
+    price: 0.8
+- oars:
+    category: rowing
+    url: https://images.unsplash.com/photo-1600121281506-1f7e57f8be2f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870
+    location: 43 Rue des Docks, 69009, Lyon
+    description: Perfect to row down the Loire during summer. Boat rented separately.
+    price: 3.4
+- racing boat:
+    category: rowing
+    url: https://images.unsplash.com/photo-1606768952971-7e22538ffc6a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1746
+    location: 1 Rue Pierre Lescot, 75001, Paris
+    description: It looks lonely, but it's actually a very happy boat. It's named 'Sinked'.
+    price: 16.5
+- steering:
+    category: rowing
+    url: https://images.unsplash.com/photo-1470645792662-dd18394f8c97?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738
+    location: Plage de la Concurrence, 17000, La Rochelle
+    description: In case you want to cheat and not paddle like everyone else, you can just 'Pimp My Ride' but on your boat and install this!
+    price: 3
+- wing:
+    category: paragliding
+    url: https://images.unsplash.com/photo-1573507712396-586c2fc99b36?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 33B Rue du 8 Mai 1945, 69330, Meyzieu
+    description: It's called wing, but they are not real! Please don't think you'll become the perfect little angel your mother told you you were when you have this.
+    price: 28
+- harness:
+    category: paragliding
+    url: https://images.unsplash.com/photo-1595426007413-7710f994ab18?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 3 Rue de Rochechouart, 75009, Paris
+    description: If you break it, well I suppose I cannot ask you to refund it, since you'll not be here anymore...
+    price: 15
+- variometer:
+    category: paragliding
+    url: https://img.aeroexpo.online/images_ar/photo-mg/171405-16149429.jpg
+    location: 22 Quai Charles de Gaulle, 69006, Lyon
+    description: It will help your pilot to throw you and leave you to your fate, from a higher height and without wind.
+    price: 2
+- radio:
+    category: paragliding
+    url: https://images.unsplash.com/photo-1631611114024-b1b34e724c4e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
+    location: 5 Rue Odessa, 75014, Paris
+    description: I got it the first time I jumped with friends. Keep it activated at all times, don't make the same mistake I did!
+    price: 2.5
+- GPS:
+    category: paragliding
+    url: https://images.unsplash.com/photo-1598984040075-8ef2c799bbba?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGdwc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800
+    location: 4 Rue du Mont Thabor, 75001, Paris
+    description: It's not a Tesla, it will not tell you where the cops are, or when you are about to crash onto the ground.
+    price: 4
