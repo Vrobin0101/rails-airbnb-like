@@ -7,29 +7,25 @@ const _MS_PER_HOURS = 1000 * 60 * 60;
 // Connects to data-controller="flatpickr"
 export default class extends Controller {
   static targets = ["start", "end", "price", "time", "offer", "offerinfos"]
+
   connect() {
-    flatpickr(".datepicker", {
     console.log('Hello')
     let fp = flatpickr(".datepicker", {
       enableTime: true,
       minDate: new Date(),
-      dateFormat: "d-m-Y H:i",
       time_24hr: true,
-      shorthandCurrentMonth: true,
-      "locale": {
-          "firstDayOfWeek": 1
-      }
     });
-
-    fp.minuteElement.style.display = "none";
   }
-  total(event) {
+
+  total() {
     this.offerinfosTarget.classList.add("d-none")
     const offerPrice = parseFloat(this.offerTarget.innerText, 10)
+    console.log(offerPrice)
     if (this.startTarget.value !== "" && this.endTarget.value !== "") {
-      console.log('got here')
       const start = new Date(this.startTarget.value)
       const end = new Date(this.endTarget.value)
+      console.log(start)
+      console.log(end)
       const days = Math.round((end - start) / _MS_PER_DAY)
       const hours = Math.round((end - start) / _MS_PER_HOURS)
       if (days >= 1) {
