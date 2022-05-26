@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   z-index: 9999;
+  height: 60px;
 }
 
 .navbar-yellow {
@@ -22,4 +23,8 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
+}
+
+.nav-item {
+  margin-right: 10px;
 }

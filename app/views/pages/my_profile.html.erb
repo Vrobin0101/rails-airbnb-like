@@ -4,34 +4,43 @@
 <div class="container mt-5">
   <h2>Hello <%=current_user.first_name %>!</h2>
   <p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
+
+
   <div class="profile">
     <div class="my-info">
       <h4>Ongoing gears</h4>
-      <div class="notification">
-        <% @bookings.where(status: "pending").each do |b|%>
-        <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
-        <div class="notification-content">
-          <p><%= b.offer.product_name.capitalize %></p>
-          <p><small>Status: <%= b.status %></small></p>
+      <% @bookings.where(status: "pending").each do |b|%>
+        <div class="notification">
+          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+          <div class="notification-content">
+            <p><%= b.offer.product_name.capitalize %></p>
+            <p><small class="text-warning"> <i class="fas fa-circle-notch"></i> <%= b.status.capitalize %>...</small></p>
+          </div>
         </div>
-          <% end %>
-      </div>
+      <% end %>
     </div>
   </div>
 
   <div class="profile">
     <div class="my-info">
       <h4>Booking history</h4>
-        <% @bookings.each do |b|%>
-      <div class="notification">
-        <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
-        <div class="notification-content">
-          <p><%= b.offer.product_name.capitalize %></p>
-          <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
-          <p><small>Status: <%= b.status %></small></p>
+      <% @bookings.where.not(status: "pending").each do |b|%>
+        <div class="notification">
+          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+          <div class="notification-content">
+            <p><%= b.offer.product_name.capitalize %></p>
+            <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
+            <% if b.status == 'accepted' %>
+              <p><small class="text-success "><i class="fas fa-check"></i> <%= b.status.capitalize %></small></p>
+            <% elsif b.status == 'declined' %>
+            <p><small class="text-danger "><i class="fas fa-times"></i> <%= b.status.capitalize %></small></p>
+            <% else %>
+              <p><small class="text-info "><i class="fas fa-ban"></i> <%= b.status.capitalize %></small></p>
+            <% end %>
+          </div>
         </div>
-      </div>
-          <% end %>
+      <% end %>
     </div>
   </div>
+
 </div>

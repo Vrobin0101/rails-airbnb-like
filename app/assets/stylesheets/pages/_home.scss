@@ -1,4 +1,13 @@
 // Specific CSS for your home-page
+.cards-presentation {
+  margin-top: 40px;
+  margin-bottom: 22px;
+  text-align: left;
+  h2 {
+    font-size: 24px;
+  }
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -18,9 +27,9 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1em;
+  grid-gap: 3em;
   flex-grow: 1;
-  margin-bottom: 20px;
+  margin-bottom: 90px;
   a {
     text-decoration: none;
     color: $white;
