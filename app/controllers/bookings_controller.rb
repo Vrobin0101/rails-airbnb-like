@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[show edit update]
+  before_action :set_booking, only: %i[show edit update accept decline]
   before_action :set_offer, only: %i[new create edit update]
   before_action :set_user, only: %i[new create]
   def index
@@ -30,6 +30,14 @@ class BookingsController < ApplicationController
   def update
     @booking.update(booking_params)
     redirect_to offer_path(@offer)
+  end
+
+  def accept
+    @booking.update(status: 'accepted')
+  end
+
+  def decline
+    @booking.update(status: 'declined')
   end
 
   private
