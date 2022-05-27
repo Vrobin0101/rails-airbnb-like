@@ -19,10 +19,10 @@
             <p><small class="text-warning "><%= b.status.capitalize %></small></p>
           </div>
           <div>
-            <%= button_to booking_accept_path(b) do %>
+            <%= button_to booking_accept_path(b), remote: true do %>
               <p class="text-success mx-1">Accept</p>
             <% end %>
-            <%= button_to booking_decline_path(b) do %>
+            <%= button_to booking_decline_path(b),remote: true do %>
               <p class="text-danger">Decline</p>
             <% end %>
           </div>
