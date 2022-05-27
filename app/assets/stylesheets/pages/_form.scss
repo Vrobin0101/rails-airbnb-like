@@ -32,6 +32,12 @@
   padding-left: 5%;
 }
 
+.dropdown-category {
+  option {
+    text-transform: capitalize;
+  }
+}
+
 .mapboxgl-ctrl-geocoder {
   max-width: none;
   width: 100%;
