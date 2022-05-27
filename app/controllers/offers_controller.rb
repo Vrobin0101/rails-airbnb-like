@@ -1,6 +1,5 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: %i[show edit update destroy]
-  before_action :offer_params, only: %i[create edit update]
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
@@ -43,14 +42,14 @@ class OffersController < ApplicationController
   end
 
   def update
-    @offer = Offer.update(offer_params)
     authorize @offer
+    @offer.update(offer_params)
     redirect_to my_bookings_path
   end
 
   def destroy
-    @offer.destroy
     authorize @offer
+    @offer.destroy
     redirect_to offer_path, status: :see_other
   end
 
