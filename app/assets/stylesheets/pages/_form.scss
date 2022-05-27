@@ -39,3 +39,23 @@
   box-shadow: none;
   background-color: transparent;
 }
+
+.mapboxgl-ctrl-geocoder--pin-right {
+  display: none;
+}
+
+.mapboxgl-ctrl-geocoder--icon.mapboxgl-ctrl-geocoder--icon-search {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+  padding: 3px !important;
+  border-radius: 5px !important;
+}
+
+.mapboxgl-ctrl-geocoder--input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 2px;
+}
