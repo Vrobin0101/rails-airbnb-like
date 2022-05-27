@@ -24,9 +24,10 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-.simple_form {
+.simple_form_home {
   border-radius: 5px;
-  background-color: #F5F5F5;
+  background-color: transparent;
   opacity: 0.98;
-  box-shadow: 0px 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.3);
+  border: 0.5px solid $green;
 }

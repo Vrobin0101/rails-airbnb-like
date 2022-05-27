@@ -3,10 +3,12 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-     <% unless params[:action] == "home"%>
-      <h2><%= link_to "Tutti Sporti", root_path %></h2>
-     <% else %>
+     <% if params[:action] == "home"%>
       <h2></h2>
+     <% else %>
+      <%= link_to root_path do %>
+        <h2>Tutti Sporti</h2>
+        <% end  %>
      <% end %>
 
 
