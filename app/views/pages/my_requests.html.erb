@@ -15,7 +15,7 @@
           <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
           <div class="notification-content">
             <p><%= link_to b.offer.product_name.capitalize, offer_path(b) %></p>
-            <p><%= b.user.first_name %> <%= b.user.last_name %></p>
+            <p><small><%= b.user.first_name %> <%= b.user.last_name %></small></p>
             <p><small class="text-warning "><%= b.status.capitalize %></small></p>
           </div>
           <div class="button-request">
