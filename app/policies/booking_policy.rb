@@ -6,6 +6,14 @@ class BookingPolicy < ApplicationPolicy
     # end
   end
 
+  def accept?
+    true
+  end
+
+  def decline?
+    accept?
+  end
+
   def index?
     true
   end

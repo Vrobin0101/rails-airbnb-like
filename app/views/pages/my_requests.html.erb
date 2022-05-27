@@ -19,8 +19,12 @@
             <p><small class="text-warning "><%= b.status.capitalize %></small></p>
           </div>
           <div>
-            <a class="text-success mx-1">Accept</a>
-            <a class="text-danger">Decline</a>
+            <%= button_to booking_accept_path(b) do %>
+              <p class="text-success mx-1">Accept</p>
+            <% end %>
+            <%= button_to booking_decline_path(b) do %>
+              <p class="text-danger">Decline</p>
+            <% end %>
           </div>
         </div>
         <% end %>
