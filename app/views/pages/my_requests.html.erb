@@ -1,0 +1,47 @@
+<%= render "shared/navbar" %>
+
+<div class="container mt-10" data-controller="toggle">
+  <div class="container header-dashboard">
+    <h2 class="title-my-bookings">Hello <%=current_user.first_name %>!</h2>
+    <p><%=current_user.first_name %> <%=current_user.last_name %> - Member since <%=current_user.created_at.strftime('%B %Y') %></p>
+  </div>
+
+  <div class="my-dashboard">
+    <div class="my-info">
+      <h4>Requests</h4>
+      <div data-toggle-target="pending">
+        <% @bookings.each do |b|%>
+        <div class="notification">
+          <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+          <div class="notification-content">
+            <p><%= link_to b.offer.product_name.capitalize, offer_path(b) %></p>
+            <p><%= b.user.first_name %> <%= b.user.last_name %></p>
+            <p><small class="text-warning "><%= b.status.capitalize %></small></p>
+          </div>
+          <div>
+            <a class="text-success mx-1">Accept</a>
+            <a class="text-danger">Decline</a>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="my-info">
+      <h4>Offers</h4>
+        <div data-toggle-target="pending">
+          <% @offers.each do |b|%>
+          <div class="notification">
+            <%= cl_image_tag b.photo.key, class: "avatar-large"%>
+            <div class="notification-content">
+              <p><%= b.product_name.capitalize %></p>
+              <p><small><%= b.location %></small></p>
+              <p><small class="text-warning"></small></p>
+            </div>
+            <%= link_to 'Edit', edit_offer_path(b), class: 'btn btn-edit-offer' %>
+            <%= link_to ('<i class="fa-solid fa-xmark"></i>').html_safe, offer_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"delete-cross"%>
+          </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
