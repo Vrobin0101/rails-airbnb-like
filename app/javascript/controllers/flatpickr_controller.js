@@ -37,14 +37,14 @@ export default class extends Controller {
       const days = Math.round((end - start) / _MS_PER_DAY)
       const hours = Math.round((end - start) / _MS_PER_HOURS)
       if (days === 1) {
-        this.timeTarget.innerText = `${days} day `
-        this.priceTarget.innerHTML = `${offerPrice * (10 * days)}` + ' ' + '<i class="fa-solid fa-euro-sign fa-xs"></i>'
+        this.timeTarget.innerText = `Confirm this gear for ${days} day`
+        this.priceTarget.innerHTML = '<i class="fa-solid fa-euro-sign fa-lg"></i>' + ' ' + `${offerPrice * (10 * days)}`
       } else if (days > 1) {
-        this.timeTarget.innerText = `${days} days `
-        this.priceTarget.innerHTML = `${offerPrice * (10 * days)}` + ' ' + '<i class="fa-solid fa-euro-sign fa-xs"></i>'
+        this.timeTarget.innerText = `Confirm this gear for ${days} days`
+        this.priceTarget.innerHTML = '<i class="fa-solid fa-euro-sign fa-lg"></i>' + ' ' + `${offerPrice * (10 * days)}`
       } else {
-        this.timeTarget.innerText = `${hours} hours `
-        this.priceTarget.innerHTML = `${offerPrice * hours}` + ' ' + '<i class="fa-solid fa-euro-sign fa-xs"></i>'
+        this.timeTarget.innerText = `Confirm this gear for ${hours} hours `
+        this.priceTarget.innerHTML = '<i class="fa-solid fa-euro-sign fa-lg"></i>' + ' ' + `${offerPrice * hours}`
 
       }
       this.offerinfosTarget.classList.remove("d-none")
