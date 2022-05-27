@@ -14,6 +14,14 @@ export default class extends Controller {
       enableTime: true,
       minDate: new Date(),
       time_24hr: true,
+      defaultHour: 10,
+      defaultMinute: 0,
+      hourIncrement: 2,
+      minuteIncrement: 120,
+      shorthandCurrentMonth: true,
+      "locale": {
+          "firstDayOfWeek": 1
+      }
     });
   }
 
@@ -28,12 +36,15 @@ export default class extends Controller {
       console.log(end)
       const days = Math.round((end - start) / _MS_PER_DAY)
       const hours = Math.round((end - start) / _MS_PER_HOURS)
-      if (days >= 1) {
+      if (days === 1) {
+        this.timeTarget.innerText = `${days} day `
+        this.priceTarget.innerHTML = `${offerPrice * (10 * days)}` + ' ' + '<i class="fa-solid fa-euro-sign fa-xs"></i>'
+      } else if (days > 1) {
         this.timeTarget.innerText = `${days} days `
-        this.priceTarget.innerText = `${offerPrice * (10 * days)} $`
+        this.priceTarget.innerHTML = `${offerPrice * (10 * days)}` + ' ' + '<i class="fa-solid fa-euro-sign fa-xs"></i>'
       } else {
         this.timeTarget.innerText = `${hours} hours `
-        this.priceTarget.innerText = `${offerPrice * hours} $`
+        this.priceTarget.innerHTML = `${offerPrice * hours}` + ' ' + '<i class="fa-solid fa-euro-sign fa-xs"></i>'
 
       }
       this.offerinfosTarget.classList.remove("d-none")
