@@ -18,13 +18,11 @@
             <p><%= b.user.first_name %> <%= b.user.last_name %></p>
             <p><small class="text-warning "><%= b.status.capitalize %></small></p>
           </div>
-          <div>
-            <%= button_to booking_accept_path(b), remote: true do %>
-              <p class="text-success mx-1">Accept</p>
+          <div class="button-request">
+            <%= button_to booking_accept_path(b), class:"button-accepted me-1" do %>
+              <p class="text-success mx-3">Accept</p>
             <% end %>
-            <%= button_to booking_decline_path(b),remote: true do %>
-              <p class="text-danger">Decline</p>
-            <% end %>
+            <%= button_to "Decline", booking_decline_path(b), class:"text-danger text-decoration-none button-declined" %>
           </div>
         </div>
         <% end %>
