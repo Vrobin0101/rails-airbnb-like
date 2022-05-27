@@ -36,6 +36,20 @@
   }
 }
 
+.cards-presentation:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background-image: url(https://www.wearephenix.com/wp-content/themes/phenix/assets/img/decorations/triforce-grey.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: translate(-100%,-70%);
+  transform: translate(-100%,-70%);
+}
+
 .card-category {
   background-size: cover;
   background-position: bottom;

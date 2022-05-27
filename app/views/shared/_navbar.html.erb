@@ -3,10 +3,12 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-     <% unless params[:action] == "home"%>
-      <h2><%= link_to "Tutti Sporti", root_path %></h2>
-     <% else %>
+     <% if params[:action] == "home"%>
       <h2></h2>
+     <% else %>
+      <%= link_to root_path do %>
+        <h2>Tutti Sporti</h2>
+        <% end  %>
      <% end %>
 
 
@@ -25,6 +27,7 @@
             <%= image_tag "https://doodleipsum.com/700/avatar?bg=05595b&i=40beceda21ec29f68878a3a0415aeb6b", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div id='dropdown-background' class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Bookings", my_bookings_path, class: "dropdown-item" %>
+              <%= link_to "My Requests", my_requests_path, class: "dropdown-item" %>
               <%= link_to "Sign Out", destroy_user_session_path, class: "dropdown-item" %>
             </div>
           </li>
