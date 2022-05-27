@@ -90,6 +90,7 @@
               <p><small class="text-warning"></small></p>
             </div>
             <%= link_to 'Edit', edit_offer_path(b), class: 'btn btn-edit-offer' %>
+            <%= link_to ('<i class="fa-solid fa-xmark"></i>').html_safe, offer_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"delete-cross"%>
           </div>
           <% end %>
         </div>
