@@ -14,12 +14,12 @@ class OfferPolicy < ApplicationPolicy
     true
   end
 
-  def create?
-    true
-  end
-
   def new?
     create?
+  end
+
+  def create?
+    true
   end
 
   def update?
