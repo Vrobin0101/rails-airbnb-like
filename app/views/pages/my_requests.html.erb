@@ -19,10 +19,10 @@
             <p><small class="text-warning "><%= b.status.capitalize %></small></p>
           </div>
           <div class="button-request">
-            <%= button_to booking_accept_path(b), class:"button-accepted me-1" do %>
-              <p class="text-success mx-3">Accept</p>
+            <%= button_to booking_accept_path(b), class:"button-accepted me-1 text-success mx-3" do %>
+              Accept
             <% end %>
-            <%= button_to "Decline", booking_decline_path(b), class:"text-danger text-decoration-none button-declined" %>
+            <%= link_to ('<i class="fa-solid fa-xmark"></i>').html_safe, booking_decline_path(b), class:"text-danger text-decoration-none button-declined" %>
           </div>
         </div>
         <% end %>
@@ -36,11 +36,10 @@
             <%= cl_image_tag b.photo.key, class: "avatar-large"%>
             <div class="notification-content">
               <p><%= b.product_name.capitalize %></p>
-              <p><small><%= b.location %></small></p>
               <p><small class="text-warning"></small></p>
             </div>
             <%= link_to 'Edit', edit_offer_path(b), class: 'btn btn-edit-offer' %>
-            <%= link_to ('<i class="fa-solid fa-xmark"></i>').html_safe, offer_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"delete-cross"%>
+            <%= link_to ('<i class="fa-solid fa-trash fa-xs"></i>').html_safe, offer_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"delete-cross"%>
           </div>
           <% end %>
         </div>
