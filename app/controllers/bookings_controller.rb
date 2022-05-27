@@ -34,10 +34,12 @@ class BookingsController < ApplicationController
 
   def accept
     @booking.update(status: 'accepted')
+    redirect_to my_requests_path
   end
 
   def decline
     @booking.update(status: 'declined')
+    redirect_to my_requests_path
   end
 
   private
