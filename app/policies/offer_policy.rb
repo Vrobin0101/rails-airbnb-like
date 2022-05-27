@@ -15,6 +15,10 @@ class OfferPolicy < ApplicationPolicy
   end
 
   def new?
+    create?
+  end
+
+  def create?
     true
   end
 

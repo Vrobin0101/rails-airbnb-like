@@ -26,7 +26,6 @@ export default class extends Controller {
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup)
         .addTo(this.map)
-        // je sais pas pourquoi ça marche pas
     })
   }
 
