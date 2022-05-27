@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: %i[show edit update destroy]
-  before_action :offer_params, only: %i[create update]
+  before_action :offer_params, only: %i[create edit update]
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
@@ -45,11 +45,7 @@ class OffersController < ApplicationController
   def update
     @offer = Offer.update(offer_params)
     authorize @offer
-    if @offer.save
-      redirect_to offer_path(@offer)
-    else
-      render :edit, status: :unprocessable_entity
-    end
+    redirect_to my_bookings_path
   end
 
   def destroy
@@ -65,6 +61,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:product_name, :category, :location, :price, :photo, :description)
+    params.require(:offer).permit(:product_name, :category, :location, :price, :photo, :description, :latitude, :longitude)
   end
 end

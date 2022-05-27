@@ -14,16 +14,20 @@ class OfferPolicy < ApplicationPolicy
     true
   end
 
-  def new?
+  def create?
     true
   end
 
-  # def edit?
-  #   update
-  # end
+  def new?
+    create?
+  end
 
   def update?
     record.user == user
+  end
+
+  def edit?
+    update?
   end
 
   def destroy?
