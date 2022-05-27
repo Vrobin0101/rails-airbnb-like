@@ -26,28 +26,28 @@
 
 .cards-presentation {
   margin-top: 40px;
-  margin-bottom: 22px;
+  margin-bottom: 40px;
   text-align: center;
   h2 {
     font-size: 24px;
     margin-bottom: 40px;
     font-weight: bold;
-    color: #062C30
+    color: #062C30;
+    position: relative;
+    width: 100%;
+    display: inline;
   }
 }
 
-.cards-presentation:before {
+.cards-presentation h2:before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 36px;
-  height: 36px;
+  width: 55px;
+  height: 65px;
   background-image: url(https://www.wearephenix.com/wp-content/themes/phenix/assets/img/decorations/triforce-grey.svg);
   background-repeat: no-repeat;
-  background-size: contain;
-  -webkit-transform: translate(-100%,-70%);
-  transform: translate(-100%,-70%);
+  transform: translate(-122%, -42%);
+  background-size: auto;
 }
 
 .card-category {
