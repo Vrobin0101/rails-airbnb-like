@@ -37,6 +37,8 @@ puts '... And done as well!'
 
 puts 'Lastly creating bookings...'
 Offer.all.each do |offer|
-  Booking.create(start_date: Time.now, end_date: Time.now, user: User.find(rand(1..10)), offer: offer, status: STATUS.sample)
+  range = (1..10).to_a
+  range.delete(offer.user_id)
+  Booking.create(start_date: Time.now, end_date: Time.now, user: User.find(range.sample), offer: offer, status: STATUS.sample)
 end
 puts '... Finito!'
