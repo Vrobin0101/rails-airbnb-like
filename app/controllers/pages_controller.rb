@@ -9,4 +9,9 @@ class PagesController < ApplicationController
     @bookings = Booking.where(user: current_user)
     @offers = Offer.where(user: current_user)
   end
+
+  def my_requests
+    @bookings = current_user.rented_offers.where(status: 'pending')
+    @offers = current_user.offers
+  end
 end

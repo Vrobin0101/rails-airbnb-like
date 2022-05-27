@@ -66,33 +66,16 @@
 
         <div data-toggle-target="cancelled">
           <% @bookings.where(status: "cancelled").each do |b|%>
-          <div class="notification">
-            <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
-            <div class="notification-content">
-              <p><%= link_to b.offer.product_name.capitalize, offer_path(b) %></p>
-              <p><small class="text-info "><i class="fas fa-ban"></i></i> <%= b.status.capitalize %></small></p>
+            <div class="notification">
+              <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
+              <div class="notification-content">
+                <p><%= link_to b.offer.product_name.capitalize, offer_path(b) %></p>
+                <p><small class="text-info "><i class="fas fa-ban"></i></i> <%= b.status.capitalize %></small></p>
+              </div>
             </div>
-          </div>
           <% end %>
         </div>
 
       </div>
-
-    <div class="my-info">
-      <h4>Offers</h4>
-        <div data-toggle-target="pending">
-          <% @offers.each do |b|%>
-          <div class="notification">
-            <%= cl_image_tag b.photo.key, class: "avatar-large"%>
-            <div class="notification-content">
-              <p><%= b.product_name.capitalize %></p>
-              <p><small><%= b.location %></small></p>
-              <p><small class="text-warning"></small></p>
-            </div>
-            <%= link_to 'Edit', edit_offer_path(b), class: 'btn btn-edit-offer' %>
-            <%= link_to ('<i class="fa-solid fa-xmark"></i>').html_safe, offer_path(b), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"delete-cross"%>
-          </div>
-          <% end %>
-        </div>
-  </div>
+    </div>
 </div>
