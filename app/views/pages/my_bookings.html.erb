@@ -31,7 +31,7 @@
           <div class="notification">
             <%= cl_image_tag b.offer.photo.key, class: "avatar-large"%>
             <div class="notification-content">
-              <p><%= link_to b.offer.product_name.capitalize, offer_path(b) %></p>
+              <p><%= link_to b.offer.product_name.capitalize, offer_path(b.offer) %></p>
               <p><small><%= b.start_date.strftime('%d %B %Y') %></small></p>
               <p><small class="text-warning"> <i class="rotating fas fa-circle-notch"></i> <%= b.status.capitalize %></small></p>
             </div>
