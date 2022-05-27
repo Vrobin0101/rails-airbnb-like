@@ -1,0 +1,19 @@
+.button-request {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.button-accepted {
+  text-decoration: none;
+  border: 0.5px solid $green;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+}
+
+.button-declined {
+  text-decoration: none;
+  border: 0px solid white;
+  background-color: white;
+}
