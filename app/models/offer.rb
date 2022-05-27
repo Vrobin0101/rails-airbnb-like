@@ -10,17 +10,4 @@ class Offer < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
-  before_validation :lat_changed?
-
-  private
-
-  def lat_changed?
-    if (self.location_changed?)
-        if !(self.latitude_changed?)
-            self.errors.add(:location, "is not valid")
-            return false
-        end
-    end
-    return true
-  end
 end
