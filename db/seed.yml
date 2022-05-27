@@ -50,13 +50,13 @@
     category: basketball
     url: https://images.unsplash.com/photo-1531593773601-7a75ca4cd915?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740
     location: 140 Boulevard Joffre, 17000, La Rochelle
-    description: It's a hoop with a net around it, what do you expect?
+    description: It's a hoop with a net around it, what did you expect?
     price: 2
 - ball:
     category: basketball
     url: https://images.pexels.com/photos/945471/pexels-photo-945471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
     location: 133 Avenue Parmentier, 75011, Paris
-    description: Signed by Michael Jordan himself, and bought from Wish, it's a something you will not find anywhere else!
+    description: Signed by Michael Jordan himself, and bought from Wish, it's something you will not find anywhere else!
     price: 5
 - jersey:
     category: basketball
@@ -116,7 +116,7 @@
     category: hockey
     url: https://images.unsplash.com/photo-1550865811-cc8872a15d1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687
     location: 6 Passage des Panoramas, 75002, Paris
-    description: Only for hockey, if you are planing to ice danse, it will looks very strange to everyone else.
+    description: Only for hockey, if you are planing to ice dance, it will looks very strange to everyone else.
     price: 7.5
 - pads:
     category: hockey
@@ -170,7 +170,7 @@
     category: ski
     url: https://images.unsplash.com/photo-1609615628693-07ae921847fb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928
     location: 15 Rue Arbre Sec, 69001, Lyon
-    description: It's a child size, but if you're like me it'll fit you well and nobody will know the difference!
+    description: It's a child size, but if you're like me, it'll fit you well and nobody will know the difference!
     price: 2.2
 - sticks:
     category: ski
@@ -188,7 +188,7 @@
     category: rowing
     url: https://images.unsplash.com/photo-1606768952971-7e22538ffc6a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1746
     location: 1 Rue Pierre Lescot, 75001, Paris
-    description: It looks lonely, but it's actually a very happy boat. It's named 'Sinked'.
+    description: It looks lonely, but it's actually a very happy boat. She's named 'Sinked'.
     price: 16.5
 - steering:
     category: rowing
