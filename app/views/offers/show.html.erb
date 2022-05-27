@@ -32,8 +32,8 @@
               <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker", data: {flatpickr_target: 'end'}}, placeholder: "#{(Date.today + 1).strftime('%A, %B %-d')}" %>
               <div class="d-none" data-flatpickr-target="offer"><%= @offer.price %></div>
             <div class="d-none d-flex mx-1 justify-content-between" data-flatpickr-target="offerinfos">
-              <p class="price" data-flatpickr-target="price"></p>
-              <p class="time" data-flatpickr-target="time"></p>
+                  <p class="time pt-3" data-flatpickr-target="time"></p>
+                  <p class="price pt-3" data-flatpickr-target="price"></p>
             </div>
             <% if user_signed_in? %>
               <%= f.submit 'Book Gear', class: 'btn' %>
